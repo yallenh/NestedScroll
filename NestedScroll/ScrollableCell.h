@@ -10,6 +10,8 @@
 
 @interface ScrollableCell : UICollectionViewCell
 
+@property (nonatomic) NSUInteger idx;
 - (void)populateData:(id)data;
+- (CGFloat)contentHeight;
 
 @end

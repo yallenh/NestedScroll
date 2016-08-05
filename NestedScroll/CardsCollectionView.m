@@ -7,12 +7,14 @@
 //
 
 #import "CardsCollectionView.h"
+#import "ScrollableCell.h"
 
 @interface CardsCollectionView () <
 UICollectionViewDelegateFlowLayout,
 UIScrollViewDelegate
 >
-@property (nonatomic) CGPoint offset;
+@property (nonatomic) CGFloat offsetY;
+@property (nonatomic) NSUInteger currentIndex;
 @end
 
 @implementation CardsCollectionView
@@ -34,25 +36,55 @@ UIScrollViewDelegate
     return self;
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"touchesBegan on collectionview");
+}
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event
+{
+    NSLog(@"touchesMoved on collectionview");
+}
+
 #pragma mark scroll view delegate
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    _offset = scrollView.contentOffset;
+    _offsetY = scrollView.contentOffset.y;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    CGPoint newOffset = scrollView.contentOffset;
-    if ((self.scrollDirection == ScrollDirectionDown && newOffset.y < _offset.y) ||
-        (self.scrollDirection == ScrollDirectionUp && newOffset.y > _offset.y)) {
-        [scrollView setContentOffset:_offset];
+    CGFloat newOffsetY = scrollView.contentOffset.y;
+    if ((self.scrollDirection == ScrollDirectionDown && newOffsetY < _offsetY) ||
+        (self.scrollDirection == ScrollDirectionUp && newOffsetY > _offsetY)) {
+        [scrollView setContentOffset:CGPointMake(0, _offsetY)];
     }
+    self.currentIndex = (NSUInteger)(newOffsetY / CGRectGetHeight(self.frame) + 0.5f);
+    NSLog(@"%tu", self.currentIndex);
 }
 
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
+{
+    // NSLog(@"scrollViewWillBeginDecelerating");
+}
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    // NSLog(@"scrollViewDidEndDecelerating");
     self.scrollDirection = ScrollDirectionVertical;
+
+    /*
+    [[self visibleCells] enumerateObjectsUsingBlock:^(ScrollableCell *cell, NSUInteger idx, BOOL *stop) {
+        if (cell.idx == self.currentIndex) {
+            if (cell.contentHeight > CGRectGetHeight(cell.frame)) {
+                self.scrollEnabled = NO;
+            }
+            else {
+                self.scrollDirection = ScrollDirectionVertical;
+                self.scrollEnabled = YES;
+            }
+        }
+    }];
     // self.scrollEnabled = NO;
+     */
 }
 
 @end
