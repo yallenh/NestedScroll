@@ -13,5 +13,6 @@
 @property (nonatomic) NSUInteger idx;
 - (void)populateData:(id)data;
 - (CGFloat)contentHeight;
+- (CGFloat)contentOffsetY;
 
 @end

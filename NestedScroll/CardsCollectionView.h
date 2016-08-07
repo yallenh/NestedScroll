@@ -13,4 +13,6 @@
 
 @property (nonatomic) ScrollDirection scrollDirection;
 
+- (void)scrollOneStep:(ScrollDirection)scrollDirection;
+
 @end

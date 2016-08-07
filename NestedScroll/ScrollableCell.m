@@ -11,6 +11,7 @@
 
 @interface ScrollableCell() <UIScrollViewDelegate>
 @property (nonatomic) UIScrollView *scrollView;
+@property (nonatomic) CGFloat offsetY;
 @end
 
 @implementation ScrollableCell
@@ -53,49 +54,94 @@
 {
     return _scrollView.contentSize.height;
 }
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+- (CGFloat)contentOffsetY
 {
-    if (_scrollView.contentSize.height <= self.frame.size.height) {
-        CardsCollectionView *cardsCollectionView = (CardsCollectionView *)[[self superview] superview];
-        cardsCollectionView.scrollEnabled = YES;
-        cardsCollectionView.scrollDirection = ScrollDirectionVertical;
-    }
+    return _scrollView.contentOffset.y;
 }
 
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event;
+-(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
 {
-    UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:self];
-    CGPoint prevLocation = [touch previousLocationInView:self];
+    CardsCollectionView *outerCollectionView = (CardsCollectionView *)[self superview];
+    if ([self contentHeight] <= CGRectGetHeight(self.frame)) {
+        outerCollectionView.scrollEnabled = YES;
+        outerCollectionView.scrollDirection = ScrollDirectionVertical;
+    }
+    return YES;
+}
 
-    CardsCollectionView *outerCollectionView = (CardsCollectionView *)[[self superview] superview];
+#pragma mark scroll view delegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    _offsetY = _scrollView.contentOffset.y;
 
-    // scroll up at top
-    if ((location.y - prevLocation.y > 0) && (_scrollView.contentOffset.y <= 0) && self.idx) {
+    /*
+
+    CardsCollectionView *outerCollectionView = (CardsCollectionView *)[self superview];
+    // at top
+    if (_scrollView.contentOffset.y <= 0 && self.idx) {
         outerCollectionView.scrollEnabled = YES;
         outerCollectionView.scrollDirection = ScrollDirectionUp;
     }
-    // scroll down at bottom
-    else if ((location.y - prevLocation.y < 0) && (_scrollView.contentOffset.y + CGRectGetHeight(self.frame) >= _scrollView.contentSize.height) && self.idx < 6) {
+    // at bottom
+    else if (_scrollView.contentOffset.y + CGRectGetHeight(self.frame) >= _scrollView.contentSize.height  && self.idx < 6) {
         outerCollectionView.scrollEnabled = YES;
         outerCollectionView.scrollDirection = ScrollDirectionDown;
     }
     else {
         outerCollectionView.scrollEnabled = NO;
     }
+     */
 }
-
-#pragma mark scroll view delegate
-
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    CGFloat newOffsetY = _scrollView.contentOffset.y;
+    
+    CardsCollectionView *outerCollectionView = (CardsCollectionView *)[self superview];
+    // at top
+    if ([self offsetY] <= 0 && self.idx) {
+        
+        // scroll up
+        if (newOffsetY < _offsetY) {
+            outerCollectionView.scrollEnabled = YES;
+            outerCollectionView.scrollDirection = ScrollDirectionUp;
+        }
+        // scroll down
+        else {
+            
+        }
+        
+    }
+    // at bottom
+    if ([self contentOffsetY] + CGRectGetHeight(self.frame) >= [self contentHeight]  && self.idx < 6) {
+        
+        // scroll up
+        if (newOffsetY < _offsetY) {
+            
+        }
+        // scroll down
+        else {
+            outerCollectionView.scrollEnabled = YES;
+            outerCollectionView.scrollDirection = ScrollDirectionDown;
+        }
+    }
+}
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    CGFloat newOffsetY = _scrollView.contentOffset.y;
+    CardsCollectionView *outerCollectionView = (CardsCollectionView *)[self superview];
+    // at top
+    if ([self offsetY] <= 0 && newOffsetY < _offsetY) {
+        outerCollectionView.scrollEnabled = YES;
+        outerCollectionView.scrollDirection = ScrollDirectionUp;
+        [outerCollectionView scrollOneStep:ScrollDirectionUp];
+    }
 }
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
 {
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    /*
     CardsCollectionView *outerCollectionView = (CardsCollectionView *)[self superview];
 
     // at top
@@ -111,6 +157,7 @@
     else {
         outerCollectionView.scrollEnabled = NO;
     }
+     */
 }
 
 @end
