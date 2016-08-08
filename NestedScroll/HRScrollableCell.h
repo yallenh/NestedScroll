@@ -1,14 +1,14 @@
 //
-//  ScrollableCell.h
+//  HRScrollableCell.h
 //  NestedScroll
 //
-//  Created by Yan-Hsiang Huang on 8/3/16.
+//  Created by Yan-Hsiang Huang on 8/8/16.
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ScrollableCell : UICollectionViewCell
+@interface HRScrollableCell : UICollectionViewCell
 
 @property (nonatomic) NSUInteger idx;
 - (void)populateData:(id)data;

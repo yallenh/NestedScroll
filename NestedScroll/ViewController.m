@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ScrollableCell.h"
+#import "HRScrollableCell.h"
 
 @interface ViewController() <
     UICollectionViewDataSource,
@@ -37,7 +37,7 @@
     _collectionView.pagingEnabled = YES;
     [_collectionView setDelegate:self];
     [_collectionView setDataSource:self];
-    [_collectionView registerClass:[ScrollableCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
+    [_collectionView registerClass:[HRScrollableCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
 
     [self.view addSubview:_collectionView];
 }
@@ -50,7 +50,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ScrollableCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+    HRScrollableCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     [cell populateData:[NSNumber numberWithUnsignedInteger:[indexPath row]]];
     switch ([indexPath row]) {
         case 0:

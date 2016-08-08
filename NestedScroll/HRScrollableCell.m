@@ -1,18 +1,18 @@
 //
-//  ScrollableCell.m
+//  HRScrollableCell.m
 //  NestedScroll
 //
-//  Created by Yan-Hsiang Huang on 8/3/16.
+//  Created by Yan-Hsiang Huang on 8/8/16.
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
-#import "ScrollableCell.h"
+#import "HRScrollableCell.h"
 
-@interface ScrollableCell() <UIScrollViewDelegate>
+@interface HRScrollableCell() <UIScrollViewDelegate>
 @property (nonatomic) UIScrollView *scrollView;
 @end
 
-@implementation ScrollableCell
+@implementation HRScrollableCell
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -34,7 +34,7 @@
 - (void)populateData:(id)data
 {
     [_scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
-
+    
     self.idx = [(NSNumber *)data unsignedIntegerValue];
     if (self.idx % 2) {
         _scrollView.contentSize = _scrollView.frame.size;
