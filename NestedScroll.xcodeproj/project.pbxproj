@@ -17,7 +17,6 @@
 		91A287091D51F9E8008E03E0 /* NestedScrollUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A287081D51F9E8008E03E0 /* NestedScrollUITests.m */; };
 		91A287181D51FE5B008E03E0 /* ScrollableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A287171D51FE5B008E03E0 /* ScrollableCell.m */; };
 		91A2871D1D52E8D9008E03E0 /* StoryCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A2871C1D52E8D9008E03E0 /* StoryCard.xib */; };
-		91A287291D535615008E03E0 /* CardsCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A287281D535615008E03E0 /* CardsCollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +56,6 @@
 		91A287161D51FE5B008E03E0 /* ScrollableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollableCell.h; sourceTree = "<group>"; };
 		91A287171D51FE5B008E03E0 /* ScrollableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollableCell.m; sourceTree = "<group>"; };
 		91A2871C1D52E8D9008E03E0 /* StoryCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryCard.xib; sourceTree = "<group>"; };
-		91A287271D535615008E03E0 /* CardsCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsCollectionView.h; sourceTree = "<group>"; };
-		91A287281D535615008E03E0 /* CardsCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsCollectionView.m; sourceTree = "<group>"; };
 		91A2872A1D535657008E03E0 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,8 +112,6 @@
 				91A286E71D51F9E7008E03E0 /* AppDelegate.m */,
 				91A286E91D51F9E7008E03E0 /* ViewController.h */,
 				91A286EA1D51F9E7008E03E0 /* ViewController.m */,
-				91A287271D535615008E03E0 /* CardsCollectionView.h */,
-				91A287281D535615008E03E0 /* CardsCollectionView.m */,
 				91A287161D51FE5B008E03E0 /* ScrollableCell.h */,
 				91A287171D51FE5B008E03E0 /* ScrollableCell.m */,
 				91A2871C1D52E8D9008E03E0 /* StoryCard.xib */,
@@ -288,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91A287291D535615008E03E0 /* CardsCollectionView.m in Sources */,
 				91A286EB1D51F9E7008E03E0 /* ViewController.m in Sources */,
 				91A286E81D51F9E7008E03E0 /* AppDelegate.m in Sources */,
 				91A287181D51FE5B008E03E0 /* ScrollableCell.m in Sources */,

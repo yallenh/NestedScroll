@@ -8,26 +8,38 @@
 
 #import "ViewController.h"
 #import "ScrollableCell.h"
-#import "CardsCollectionView.h"
 
-@interface ViewController() <UICollectionViewDataSource>
-@property (nonatomic) CardsCollectionView *cardsCollectionView;
+@interface ViewController() <
+    UICollectionViewDataSource,
+    UICollectionViewDelegateFlowLayout
+>
+@property (nonatomic) UICollectionView *collectionView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUpCardsCollectionView];
+    [self setUpCollectionView];
 }
 
-- (void)setUpCardsCollectionView
+- (void)setUpCollectionView
 {
     self.view.frame = [[UIScreen mainScreen] bounds];
-    _cardsCollectionView = [[CardsCollectionView alloc] initWithFrame:self.view.frame];
-    [_cardsCollectionView setDataSource:self];
-    [_cardsCollectionView registerClass:[ScrollableCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
-    [self.view addSubview:_cardsCollectionView];
+
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.sectionInset = UIEdgeInsetsZero;
+    layout.minimumInteritemSpacing = 0;
+    layout.minimumLineSpacing = 0;
+    layout.itemSize = self.view.frame.size;
+
+    _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
+    _collectionView.pagingEnabled = YES;
+    [_collectionView setDelegate:self];
+    [_collectionView setDataSource:self];
+    [_collectionView registerClass:[ScrollableCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
+
+    [self.view addSubview:_collectionView];
 }
 
 #pragma mark collection view delegates
