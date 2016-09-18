@@ -8,8 +8,12 @@
 
 #import "HRScrollableCell.h"
 
+#import "HRYouCardCoverView.h"
+#import "HRYouCardStoryView.h"
+
 @interface HRScrollableCell() <UIScrollViewDelegate>
 @property (nonatomic) UIScrollView *scrollView;
+@property (nonatomic) UIView<HRYouCardViewProtocol> *cardView;
 @end
 
 @implementation HRScrollableCell
@@ -18,13 +22,17 @@
 {
     if (self = [super initWithFrame:frame]) {
         [self setUpScrollView];
+        
+        
+        _cardView = [HRYouCardStoryView cardView];
+        [_scrollView addSubview:_cardView];
     }
     return self;
 }
 
 - (void)setUpScrollView
 {
-    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(20, 20, CGRectGetWidth(self.frame) - 2 * 20, CGRectGetHeight(self.frame))];
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectInset(self.frame, 10.f, 10.f)];
     _scrollView.delegate = self;
     _scrollView.canCancelContentTouches = NO;
     _scrollView.delaysContentTouches = YES;
@@ -34,14 +42,16 @@
 - (void)populateData:(id)data
 {
     [_scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
-    
+    [_cardView populateWithDataSourceItem:nil forSize:_scrollView.frame.size];
+
     self.idx = [(NSNumber *)data unsignedIntegerValue];
     if (self.idx % 2) {
         _scrollView.contentSize = _scrollView.frame.size;
         _scrollView.backgroundColor = [UIColor grayColor];
     }
     else {
-        _scrollView.contentSize = CGSizeMake(CGRectGetWidth(_scrollView.frame), 1000);
+        _scrollView.contentSize = _cardView.frame.size;
+        // _scrollView.contentSize = CGSizeMake(CGRectGetWidth(_scrollView.frame), fmax(CGRectGetHeight(_cardView.frame), CGRectGetHeight(_scrollView.frame)));
         _scrollView.backgroundColor = [UIColor whiteColor];
     }
 }

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HRYouCardStoryView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lg9-0E-fqB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
+                    <color key="backgroundColor" red="0.72549019609999998" green="0.74117647060000003" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="222" id="nzb-L6-9hx"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="睡不著的好去處！全台五大深夜咖啡廳" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggd-Jq-ixS">
+                    <rect key="frame" x="52" y="242" width="270" height="67"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="270" id="9cF-Lw-8gh"/>
+                        <constraint firstAttribute="height" constant="67" id="bf3-ov-aw6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zi-ff-0xa">
+                    <rect key="frame" x="52" y="566" width="18" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="18" id="8S0-h1-mtZ"/>
+                        <constraint firstAttribute="height" constant="18" id="aj1-iD-lSg"/>
+                    </constraints>
+                    <state key="normal" title="Button" backgroundImage="info"/>
+                    <connections>
+                        <action selector="didTapInfoButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="iOb-s2-ojU"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暗角咖啡在台北市算是小有名氣的暗角咖啡，凌晨四點才結束營業的特點，著實讓許多夜貓子或夜間工作者找到了個好去處。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzw-BL-RVz">
+                    <rect key="frame" x="52" y="323" width="270" height="86"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="86" id="b5w-dz-WCc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.47058823529411764" green="0.49019607843137253" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Lg9-0E-fqB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1wv-RX-uuC"/>
+                <constraint firstItem="ggd-Jq-ixS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6FL-2q-GbS"/>
+                <constraint firstAttribute="trailing" secondItem="Lg9-0E-fqB" secondAttribute="trailing" id="HcG-Hv-oDw"/>
+                <constraint firstItem="nzw-BL-RVz" firstAttribute="top" secondItem="ggd-Jq-ixS" secondAttribute="bottom" constant="14" id="NbD-xb-LoR"/>
+                <constraint firstItem="ggd-Jq-ixS" firstAttribute="top" secondItem="Lg9-0E-fqB" secondAttribute="bottom" constant="20" id="RtO-54-9AR"/>
+                <constraint firstAttribute="bottom" secondItem="0zi-ff-0xa" secondAttribute="bottom" constant="16" id="SFL-eo-Aek"/>
+                <constraint firstItem="0zi-ff-0xa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nzw-BL-RVz" secondAttribute="bottom" constant="20" id="UYw-6M-Ybf"/>
+                <constraint firstItem="nzw-BL-RVz" firstAttribute="leading" secondItem="ggd-Jq-ixS" secondAttribute="leading" id="V5s-IW-4rV"/>
+                <constraint firstItem="0zi-ff-0xa" firstAttribute="leading" secondItem="ggd-Jq-ixS" secondAttribute="leading" id="Wbl-Sc-RFz"/>
+                <constraint firstItem="nzw-BL-RVz" firstAttribute="trailing" secondItem="ggd-Jq-ixS" secondAttribute="trailing" id="XoI-Al-4jf"/>
+                <constraint firstItem="Lg9-0E-fqB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="icE-cW-rVt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cover" destination="Lg9-0E-fqB" id="Xil-tV-npx"/>
+                <outlet property="desc" destination="nzw-BL-RVz" id="s8J-XA-dw6"/>
+                <outlet property="descHeightConstraint" destination="b5w-dz-WCc" id="cNe-lL-WSZ"/>
+                <outlet property="title" destination="ggd-Jq-ixS" id="RYF-KE-IMb"/>
+                <outlet property="titleHeightConstraint" destination="bf3-ov-aw6" id="s1c-Gv-ut8"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="info" width="18" height="18"/>
+    </resources>
+</document>
