@@ -15,6 +15,7 @@ static const CGFloat titleFontSize = 30.f;
 static const CGFloat subTitleFontSize = 28.f;
 static const CGFloat descFontSize = 18.f;
 static const CGFloat providerFontSize = 14.f;
+static const CGFloat triangleHeight = 25.f;
 static const CGFloat infoTop = 20.f;
 
 @interface HRYouCardCell : UICollectionViewCell <HRYouCardViewProtocol>

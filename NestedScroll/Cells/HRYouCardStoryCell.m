@@ -7,6 +7,7 @@
 //
 
 #import "HRYouCardStoryCell.h"
+#import "ATMTriangleView.h"
 
 @interface HRYouCardStoryCell ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -26,8 +27,12 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    _scrollView.canCancelContentTouches = NO;
-    _scrollView.delaysContentTouches = YES;
+
+    ATMTriangleView *triangle = [[ATMTriangleView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.cover.frame) - triangleHeight, CGRectGetWidth(self.cover.frame), triangleHeight) color:[UIColor whiteColor] orientation:ATMTriangleBottomToRight];
+    triangle.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [self.cover addSubview:triangle];
+//    _scrollView.canCancelContentTouches = NO;
+//    _scrollView.delaysContentTouches = YES;
 
     self.subTitle.text = nil;
     self.subTitle.font = [UIFont systemFontOfSize:subTitleFontSize];
