@@ -21,10 +21,10 @@
 
 @property (nonatomic, weak) id<HRYouCardViewDelegate> cardViewDelegate;
 
-+ (UIView<HRYouCardViewProtocol>*)cardView;
+
 
 @optional
-
++ (UIView<HRYouCardViewProtocol>*)cardView;
 - (void)populateWithDataSourceItem:(id)item forSize:(CGSize)size;
 - (CGFloat)heightForLabelText:(NSString *)text fontSize:(CGFloat)fontSize;
 

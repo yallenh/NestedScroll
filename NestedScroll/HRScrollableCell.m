@@ -44,16 +44,8 @@
     [_scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
     [_cardView populateWithDataSourceItem:nil forSize:_scrollView.frame.size];
 
-    self.idx = [(NSNumber *)data unsignedIntegerValue];
-    if (self.idx % 2) {
-        _scrollView.contentSize = _scrollView.frame.size;
-        _scrollView.backgroundColor = [UIColor grayColor];
-    }
-    else {
-        _scrollView.contentSize = _cardView.frame.size;
-        // _scrollView.contentSize = CGSizeMake(CGRectGetWidth(_scrollView.frame), fmax(CGRectGetHeight(_cardView.frame), CGRectGetHeight(_scrollView.frame)));
-        _scrollView.backgroundColor = [UIColor whiteColor];
-    }
+    _scrollView.contentSize = _cardView.frame.size;
+    _scrollView.backgroundColor = [UIColor whiteColor];
 }
 
 - (CGFloat)contentHeight
