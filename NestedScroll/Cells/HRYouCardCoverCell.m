@@ -25,6 +25,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
+    self.backgroundColor = [UIColor clearColor];
     self.title.text = nil;
     self.title.font = [UIFont systemFontOfSize:titleFontSize];
     self.desc.text = nil;
@@ -38,11 +39,7 @@
     NSString *title = @"給你更多屍速列車的帥爸！七種孔劉一次擁有";
     NSString *desc = @"全台票話題口碑延燒的《屍速列車》，讓所有觀眾都愛上了片中奮不顧身救女兒的帥爸爸孔劉。一個怎夠看？送上六部電影裡的七種孔劉Look，眼睛睜大就是你的！";
     NSString *provider = @"圖片來源：車庫娛樂";
-    
-    CGRect frame = self.frame;
-    frame.size = size;
-    self.frame = frame;
-    
+
     self.title.text = title;
     self.titleHeightConstraint.constant = [self heightForLabelText:self.title.text fontSize:titleFontSize];
     
