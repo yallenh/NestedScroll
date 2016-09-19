@@ -8,9 +8,11 @@
 
 #import "HRYouCardStoryCell.h"
 #import "ATMTriangleView.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface HRYouCardStoryCell ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewBottomConstraint;
 @property (weak, nonatomic) IBOutlet UIView *scrollContentView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *cover;
@@ -28,11 +30,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    ATMTriangleView *triangle = [[ATMTriangleView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.cover.frame) - triangleHeight, CGRectGetWidth(self.cover.frame), triangleHeight) color:[UIColor whiteColor] orientation:ATMTriangleBottomToRight];
-    triangle.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    [self.cover addSubview:triangle];
-//    _scrollView.canCancelContentTouches = NO;
-//    _scrollView.delaysContentTouches = YES;
+    [self addTriangleOnView:self.cover];
 
     self.subTitle.text = nil;
     self.subTitle.font = [UIFont systemFontOfSize:subTitleFontSize];
@@ -42,10 +40,12 @@
 
 - (void)populateWithDataSourceItem:(id)item forSize:(CGSize)size;
 {
-    [_scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
+    // [_scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
 
-    NSString *title = @"睡不著的好去處！全台五大深夜咖啡廳";//1睡不著的好去處！全台五大深夜咖啡廳2睡不著的好去處！全台五大深夜咖啡廳3";
-    NSString *desc = @"暗角咖啡在台北市算是小有名氣的暗角咖啡，凌晨四點才結束營業的特點，著實讓許多夜貓子或夜間工作者找到了個好去處。";//1暗角咖啡在台北市算是小有名氣的暗角咖啡，凌晨四點才結束營業的特點，著實讓許多夜貓子或夜間工作者找到了個好去處。2暗角咖啡在台北市算是小有名氣的暗角咖啡，凌晨四點才結束營業的特點，著實讓許多夜貓子或夜間工作者找到了個好去處。3暗角咖啡在台北市算是小有名氣的暗角咖啡，凌晨四點才結束營業的特點，著實讓許多夜貓子或夜間工作者找到了個好去處。4暗角咖啡在台北市算是小有名氣的暗角咖啡，凌晨四點才結束營業的特點，著實讓許多夜貓子或夜間工作者找到了個好去處。5暗角咖啡在台北市算是小有名氣的暗角咖啡，凌晨四點才結束營業的特點，著實讓許多夜貓子或夜間工作者找到了個好去處。6暗角咖啡在台北市算是小有名氣的暗角咖啡，凌晨四點才結束營業的特點，著實讓許多夜貓子或夜間工作者找到了個好去處。7暗角咖啡在台北市算是小有名氣的暗角咖啡，凌晨四點才結束營業的特點，著實讓許多夜貓子或夜間工作者找到了個好去處。8暗角咖啡在台北市算是小有名氣的暗角咖啡，凌晨四點才結束營業的特點，著實讓許多夜貓子或夜間工作者找到了個好去處。9暗角咖啡在台北市算是小有名氣的暗角咖啡，凌晨四點才結束營業的特點，著實讓許多夜貓子或夜間工作者找到了個好去處。10";
+    NSString *title = @"《熔爐》（2011）";
+    NSString *desc = @"正義教師揭弊校園黑暗死角的孔劉！《熔爐》是一部以校園黑暗面為題的電影，孔劉在片中飾演勇於揭開真相的美術老師，演出深刻發人深省！1正義教師揭弊校園黑暗死角的孔劉！《熔爐》是一部以校園黑暗面為題的電影，孔劉在片中飾演勇於揭開真相的美術老師，演出深刻發人深省！2正義教師揭弊校園黑暗死角的孔劉！《熔爐》是一部以校園黑暗面為題的電影，孔劉在片中飾演勇於揭開真相的美術老師，演出深刻發人深省！3正義教師揭弊校園黑暗死角的孔劉！《熔爐》是一部以校園黑暗面為題的電影，孔劉在片中飾演勇於揭開真相的美術老師，演出深刻發人深省！4正義教師揭弊校園黑暗死角的孔劉！《熔爐》是一部以校園黑暗面為題的電影，孔劉在片中飾演勇於揭開真相的美術老師，演出深刻發人深省！5正義教師揭弊校園黑暗死角的孔劉！《熔爐》是一部以校園黑暗面為題的電影，孔劉在片中飾演勇於揭開真相的美術老師，演出深刻發人深省！6正義教師揭弊校園黑暗死角的孔劉！《熔爐》是一部以校園黑暗面為題的電影，孔劉在片中飾演勇於揭開真相的美術老師，演出深刻發人深省！7";
+    
+    [self.cover sd_setImageWithURL:[NSURL URLWithString:@"https://i1.kknews.cc/large/5678/5352774826"] placeholderImage:nil options:SDWebImageRefreshCached];
 
     self.subTitle.text = title;
     self.subTitleHeightConstraint.constant = [self heightForLabelText:self.subTitle.text fontSize:subTitleFontSize];
@@ -58,6 +58,7 @@
 
     CGFloat diff = CGRectGetHeight(self.scrollView.frame) - CGRectGetHeight(self.scrollContentView.frame);
     if (diff > 0) {
+        self.scrollViewBottomConstraint.constant = 1.f;
         self.infoTopConstraint.constant = infoTop + diff;
         [self setNeedsLayout];
         [self layoutIfNeeded];

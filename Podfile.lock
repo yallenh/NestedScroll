@@ -1,0 +1,17 @@
+PODS:
+  - MNColorKit (1.0.3)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+
+DEPENDENCIES:
+  - MNColorKit (~> 1.0)
+  - SDWebImage (~> 3.8)
+
+SPEC CHECKSUMS:
+  MNColorKit: c492a81e55832327c86146accc30a666486befe4
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+
+PODFILE CHECKSUM: 322fe7484950b35d23d2fc8fc41aebf0d920ae55
+
+COCOAPODS: 1.0.1
