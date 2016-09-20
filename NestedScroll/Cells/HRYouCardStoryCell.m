@@ -7,7 +7,6 @@
 //
 
 #import "HRYouCardStoryCell.h"
-#import "ATMTriangleView.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface HRYouCardStoryCell ()
@@ -34,15 +33,15 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    [self addCoverTriangleOnView:self.cover];
-
     self.subTitle.text = nil;
     self.subTitle.font = [UIFont systemFontOfSize:subTitleFontSize];
     self.desc.text = nil;
     self.desc.font = [UIFont systemFontOfSize:descFontSize];
+    self.provider.text = nil;
+    self.provider.font = [UIFont systemFontOfSize:subProviderFontSize];
 
-    [self addDialogTriangleOnView:self.providerView];
-    // self.providerView.hidden = YES;
+    [self setUpCoverImageView:self.cover];
+    [self setUpProviderView:self.providerView];
 }
 
 - (void)populateWithDataSourceItem:(id)item forSize:(CGSize)size;

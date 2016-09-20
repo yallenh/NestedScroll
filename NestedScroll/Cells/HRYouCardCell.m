@@ -22,22 +22,24 @@
     return ceil([text hrss_sizeWithFont:[UIFont systemFontOfSize:fontSize] constrainedToSize:CGSizeMake(CGFLOAT_MAX,CGFLOAT_MAX)].width);
 }
 
-- (void)addCoverTriangleOnView:(UIView *)view
+- (void)setUpCoverImageView:(UIImageView *)view
 {
     ATMTriangleView *triangle = [[ATMTriangleView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(view.frame) - triangleHeight, CGRectGetWidth(view.frame), triangleHeight) color:[UIColor whiteColor] orientation:ATMTriangleBottomToRight];
     triangle.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [view addSubview:triangle];
 }
 
-- (void)addDialogTriangleOnView:(UIView *)view
+- (void)setUpProviderView:(UIView *)view
 {
     view.clipsToBounds = NO;
     CGFloat triangleWidth = 18.f;
     CGFloat triangleHeight = 9.f;
+    CGFloat triangleBorder = providerViewBorderWidth + 1.f;
     ATMTriangleView *triangleOut = [[ATMTriangleView alloc] initWithFrame:CGRectMake(24.f, CGRectGetHeight(view.frame) - providerViewBorderWidth, triangleWidth, triangleHeight) color:view.backgroundColor orientation:ATMTriangleDown];
-    ATMTriangleView *triangleIn = [[ATMTriangleView alloc] initWithFrame:CGRectMake(providerViewBorderWidth + 1.f, 0, triangleWidth - 2 * (providerViewBorderWidth + 1.f), triangleHeight - (providerViewBorderWidth + 1.f)) color:[UIColor whiteColor] orientation:ATMTriangleDown];
+    ATMTriangleView *triangleIn = [[ATMTriangleView alloc] initWithFrame:CGRectMake(triangleBorder, 0, triangleWidth - 2 * triangleBorder, triangleHeight - triangleBorder) color:[UIColor whiteColor] orientation:ATMTriangleDown];
     [triangleOut addSubview:triangleIn];
     [view addSubview:triangleOut];
+    view.hidden = YES;
 }
 
 + (NSString *)nibName

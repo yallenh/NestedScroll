@@ -24,12 +24,15 @@
 
 
 @optional
+
 + (UIView<HRYouCardViewProtocol>*)cardView;
+
 - (void)populateWithDataSourceItem:(id)item forSize:(CGSize)size;
+
 - (CGFloat)heightForLabelText:(NSString *)text fontSize:(CGFloat)fontSize;
 - (CGFloat)widthForLabelText:(NSString *)text fontSize:(CGFloat)fontSize;
 
-- (void)addCoverTriangleOnView:(UIView *)view;
-- (void)addDialogTriangleOnView:(UIView *)view;
+- (void)setUpCoverImageView:(UIImageView *)view;
+- (void)setUpProviderView:(UIView *)view;
 
 @end

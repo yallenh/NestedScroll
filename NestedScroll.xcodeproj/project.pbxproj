@@ -22,6 +22,8 @@
 		910467D11D8FB814008D6F15 /* HRYouCardCoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 910467CF1D8FB814008D6F15 /* HRYouCardCoverCell.m */; };
 		910467D21D8FB814008D6F15 /* HRYouCardCoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 910467D01D8FB814008D6F15 /* HRYouCardCoverCell.xib */; };
 		910467D51D8FC1CA008D6F15 /* HRGraphicsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 910467D41D8FC1CA008D6F15 /* HRGraphicsFactory.m */; };
+		915B12F11D90CFDA00BE3765 /* HRYouCardQuoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 915B12EF1D90CFDA00BE3765 /* HRYouCardQuoteCell.m */; };
+		915B12F21D90CFDA00BE3765 /* HRYouCardQuoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915B12F01D90CFDA00BE3765 /* HRYouCardQuoteCell.xib */; };
 		918331BB1D8FDE4B00BB618C /* CALayer+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 918331BA1D8FDE4B00BB618C /* CALayer+UIColor.m */; };
 		91A286E51D51F9E7008E03E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A286E41D51F9E7008E03E0 /* main.m */; };
 		91A286E81D51F9E7008E03E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A286E71D51F9E7008E03E0 /* AppDelegate.m */; };
@@ -81,6 +83,9 @@
 		910467D01D8FB814008D6F15 /* HRYouCardCoverCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRYouCardCoverCell.xib; path = Cells/HRYouCardCoverCell.xib; sourceTree = "<group>"; };
 		910467D31D8FC1CA008D6F15 /* HRGraphicsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRGraphicsFactory.h; path = Utils/HRGraphicsFactory.h; sourceTree = "<group>"; };
 		910467D41D8FC1CA008D6F15 /* HRGraphicsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRGraphicsFactory.m; path = Utils/HRGraphicsFactory.m; sourceTree = "<group>"; };
+		915B12EE1D90CFDA00BE3765 /* HRYouCardQuoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYouCardQuoteCell.h; path = Cells/HRYouCardQuoteCell.h; sourceTree = "<group>"; };
+		915B12EF1D90CFDA00BE3765 /* HRYouCardQuoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYouCardQuoteCell.m; path = Cells/HRYouCardQuoteCell.m; sourceTree = "<group>"; };
+		915B12F01D90CFDA00BE3765 /* HRYouCardQuoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRYouCardQuoteCell.xib; path = Cells/HRYouCardQuoteCell.xib; sourceTree = "<group>"; };
 		918331B91D8FDE4B00BB618C /* CALayer+UIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+UIColor.h"; path = "Utils/CALayer+UIColor.h"; sourceTree = "<group>"; };
 		918331BA1D8FDE4B00BB618C /* CALayer+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+UIColor.m"; path = "Utils/CALayer+UIColor.m"; sourceTree = "<group>"; };
 		91A286E01D51F9E7008E03E0 /* NestedScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestedScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +185,9 @@
 				910467CA1D8EFB1F008D6F15 /* HRYouCardStoryCell.h */,
 				910467CB1D8EFB1F008D6F15 /* HRYouCardStoryCell.m */,
 				910467C91D8EFB1F008D6F15 /* HRYouCardStoryCell.xib */,
+				915B12EE1D90CFDA00BE3765 /* HRYouCardQuoteCell.h */,
+				915B12EF1D90CFDA00BE3765 /* HRYouCardQuoteCell.m */,
+				915B12F01D90CFDA00BE3765 /* HRYouCardQuoteCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -385,6 +393,7 @@
 			files = (
 				91A286F31D51F9E7008E03E0 /* LaunchScreen.storyboard in Resources */,
 				91A2871D1D52E8D9008E03E0 /* StoryCard.xib in Resources */,
+				915B12F21D90CFDA00BE3765 /* HRYouCardQuoteCell.xib in Resources */,
 				910467BA1D8BE27D008D6F15 /* HRYouCardStoryView.xib in Resources */,
 				910467CC1D8EFB1F008D6F15 /* HRYouCardStoryCell.xib in Resources */,
 				91A286F01D51F9E7008E03E0 /* Assets.xcassets in Resources */,
@@ -548,6 +557,7 @@
 				91CF84EF1D5834CD008F75B7 /* HRScrollableCell.m in Sources */,
 				910467B81D8BE273008D6F15 /* HRYouCardStoryView.m in Sources */,
 				910467CD1D8EFB1F008D6F15 /* HRYouCardStoryCell.m in Sources */,
+				915B12F11D90CFDA00BE3765 /* HRYouCardQuoteCell.m in Sources */,
 				910467BD1D8BE3F4008D6F15 /* ATMTriangleView.m in Sources */,
 				910467D51D8FC1CA008D6F15 /* HRGraphicsFactory.m in Sources */,
 				910467D11D8FB814008D6F15 /* HRYouCardCoverCell.m in Sources */,

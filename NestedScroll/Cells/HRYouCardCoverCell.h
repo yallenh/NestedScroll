@@ -6,7 +6,6 @@
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "HRYouCardCell.h"
 
 @interface HRYouCardCoverCell : HRYouCardCell

@@ -12,6 +12,7 @@
 // cells
 #import "HRYouCardCoverCell.h"
 #import "HRYouCardStoryCell.h"
+#import "HRYouCardQuoteCell.h"
 
 // utils
 #import "HRGraphicsFactory.h"
@@ -79,6 +80,7 @@
     
     [_collectionView registerNib:[UINib nibWithNibName:[HRYouCardCoverCell nibName] bundle:nil] forCellWithReuseIdentifier:[HRYouCardCoverCell nibName]];
     [_collectionView registerNib:[UINib nibWithNibName:[HRYouCardStoryCell nibName] bundle:nil] forCellWithReuseIdentifier:[HRYouCardStoryCell nibName]];
+    [_collectionView registerNib:[UINib nibWithNibName:[HRYouCardQuoteCell nibName] bundle:nil] forCellWithReuseIdentifier:[HRYouCardQuoteCell nibName]];
     
     // _collectionView.bounces = NO;
     
@@ -99,8 +101,11 @@
     if (indexPath.row == 0) {
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:[HRYouCardCoverCell nibName] forIndexPath:indexPath];
     }
-    else {
+    else if (indexPath.row == 1) {
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:[HRYouCardStoryCell nibName] forIndexPath:indexPath];
+    }
+    else if (indexPath.row == 2) {
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:[HRYouCardQuoteCell nibName] forIndexPath:indexPath];
     }
     [cell populateWithDataSourceItem:nil forSize:self.collectionView.frame.size];
     return cell;
