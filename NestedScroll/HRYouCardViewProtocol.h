@@ -30,9 +30,12 @@
 - (void)populateWithDataSourceItem:(id)item forSize:(CGSize)size;
 
 - (CGFloat)heightForLabelText:(NSString *)text fontSize:(CGFloat)fontSize;
+- (CGFloat)heightForItemText:(NSString *)text fontSize:(CGFloat)fontSize;
 - (CGFloat)widthForLabelText:(NSString *)text fontSize:(CGFloat)fontSize;
 
 - (void)setUpCoverImageView:(UIImageView *)view;
 - (void)setUpProviderView:(UIView *)view;
+
+- (void)resizeScrollView;
 
 @end

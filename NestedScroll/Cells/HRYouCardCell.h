@@ -10,6 +10,7 @@
 #import "HRYouCardViewProtocol.h"
 
 static const CGSize labelSize = {270.f ,0};
+static const CGSize itemSize = {244.f ,0};
 
 static const CGFloat lineHeightFactor = 1.2;
 

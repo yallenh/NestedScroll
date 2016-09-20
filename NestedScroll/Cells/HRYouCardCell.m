@@ -17,6 +17,11 @@
     return ceil([text hrss_sizeWithFont:[UIFont systemFontOfSize:fontSize] constrainedToSize:labelSize].height);
 }
 
+- (CGFloat)heightForItemText:(NSString *)text fontSize:(CGFloat)fontSize
+{
+    return ceil([text hrss_sizeWithFont:[UIFont systemFontOfSize:fontSize] constrainedToSize:itemSize].height);
+}
+
 - (CGFloat)widthForLabelText:(NSString *)text fontSize:(CGFloat)fontSize
 {
     return ceil([text hrss_sizeWithFont:[UIFont systemFontOfSize:fontSize] constrainedToSize:CGSizeMake(CGFLOAT_MAX,CGFLOAT_MAX)].width);

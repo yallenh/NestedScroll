@@ -80,13 +80,17 @@
     [self setNeedsLayout];
     [self layoutIfNeeded];
 
+    [self resizeScrollView];
+}
+
+- (void)resizeScrollView
+{
     CGFloat diff = CGRectGetHeight(self.scrollView.frame) - CGRectGetHeight(self.scrollContentView.frame);
     if (diff > 0) {
         self.infoTopConstraint.constant = infoTop + diff;
         [self setNeedsLayout];
+        [self layoutIfNeeded];
     }
-
-    [self layoutIfNeeded];
 }
 
 - (IBAction)didTapInfoButton:(id)sender {

@@ -24,6 +24,10 @@
 		910467D51D8FC1CA008D6F15 /* HRGraphicsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 910467D41D8FC1CA008D6F15 /* HRGraphicsFactory.m */; };
 		915B12F11D90CFDA00BE3765 /* HRYouCardQuoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 915B12EF1D90CFDA00BE3765 /* HRYouCardQuoteCell.m */; };
 		915B12F21D90CFDA00BE3765 /* HRYouCardQuoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915B12F01D90CFDA00BE3765 /* HRYouCardQuoteCell.xib */; };
+		915B12F61D91169500BE3765 /* HRYouCardBulletPointCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 915B12F41D91169500BE3765 /* HRYouCardBulletPointCell.m */; };
+		915B12FB1D9119C500BE3765 /* HRYouCardBulletPointItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 915B12F91D9119C500BE3765 /* HRYouCardBulletPointItem.m */; };
+		915B12FC1D9119C500BE3765 /* HRYouCardBulletPointItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915B12FA1D9119C500BE3765 /* HRYouCardBulletPointItem.xib */; };
+		915B12FE1D912F7B00BE3765 /* HRYouCardBulletPointCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915B12FD1D912F7B00BE3765 /* HRYouCardBulletPointCell.xib */; };
 		918331BB1D8FDE4B00BB618C /* CALayer+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 918331BA1D8FDE4B00BB618C /* CALayer+UIColor.m */; };
 		91A286E51D51F9E7008E03E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A286E41D51F9E7008E03E0 /* main.m */; };
 		91A286E81D51F9E7008E03E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A286E71D51F9E7008E03E0 /* AppDelegate.m */; };
@@ -86,6 +90,12 @@
 		915B12EE1D90CFDA00BE3765 /* HRYouCardQuoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYouCardQuoteCell.h; path = Cells/HRYouCardQuoteCell.h; sourceTree = "<group>"; };
 		915B12EF1D90CFDA00BE3765 /* HRYouCardQuoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYouCardQuoteCell.m; path = Cells/HRYouCardQuoteCell.m; sourceTree = "<group>"; };
 		915B12F01D90CFDA00BE3765 /* HRYouCardQuoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRYouCardQuoteCell.xib; path = Cells/HRYouCardQuoteCell.xib; sourceTree = "<group>"; };
+		915B12F31D91169500BE3765 /* HRYouCardBulletPointCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYouCardBulletPointCell.h; path = Cells/HRYouCardBulletPointCell.h; sourceTree = "<group>"; };
+		915B12F41D91169500BE3765 /* HRYouCardBulletPointCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYouCardBulletPointCell.m; path = Cells/HRYouCardBulletPointCell.m; sourceTree = "<group>"; };
+		915B12F81D9119C500BE3765 /* HRYouCardBulletPointItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYouCardBulletPointItem.h; path = Cells/HRYouCardBulletPointItem.h; sourceTree = "<group>"; };
+		915B12F91D9119C500BE3765 /* HRYouCardBulletPointItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYouCardBulletPointItem.m; path = Cells/HRYouCardBulletPointItem.m; sourceTree = "<group>"; };
+		915B12FA1D9119C500BE3765 /* HRYouCardBulletPointItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRYouCardBulletPointItem.xib; path = Cells/HRYouCardBulletPointItem.xib; sourceTree = "<group>"; };
+		915B12FD1D912F7B00BE3765 /* HRYouCardBulletPointCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRYouCardBulletPointCell.xib; path = Cells/HRYouCardBulletPointCell.xib; sourceTree = "<group>"; };
 		918331B91D8FDE4B00BB618C /* CALayer+UIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+UIColor.h"; path = "Utils/CALayer+UIColor.h"; sourceTree = "<group>"; };
 		918331BA1D8FDE4B00BB618C /* CALayer+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+UIColor.m"; path = "Utils/CALayer+UIColor.m"; sourceTree = "<group>"; };
 		91A286E01D51F9E7008E03E0 /* NestedScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestedScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +198,12 @@
 				915B12EE1D90CFDA00BE3765 /* HRYouCardQuoteCell.h */,
 				915B12EF1D90CFDA00BE3765 /* HRYouCardQuoteCell.m */,
 				915B12F01D90CFDA00BE3765 /* HRYouCardQuoteCell.xib */,
+				915B12F31D91169500BE3765 /* HRYouCardBulletPointCell.h */,
+				915B12F41D91169500BE3765 /* HRYouCardBulletPointCell.m */,
+				915B12FD1D912F7B00BE3765 /* HRYouCardBulletPointCell.xib */,
+				915B12F81D9119C500BE3765 /* HRYouCardBulletPointItem.h */,
+				915B12F91D9119C500BE3765 /* HRYouCardBulletPointItem.m */,
+				915B12FA1D9119C500BE3765 /* HRYouCardBulletPointItem.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -398,6 +414,8 @@
 				910467CC1D8EFB1F008D6F15 /* HRYouCardStoryCell.xib in Resources */,
 				91A286F01D51F9E7008E03E0 /* Assets.xcassets in Resources */,
 				910467B01D8BBAEF008D6F15 /* HRYouCardCoverView.xib in Resources */,
+				915B12FC1D9119C500BE3765 /* HRYouCardBulletPointItem.xib in Resources */,
+				915B12FE1D912F7B00BE3765 /* HRYouCardBulletPointCell.xib in Resources */,
 				91A286EE1D51F9E7008E03E0 /* Main.storyboard in Resources */,
 				910467D21D8FB814008D6F15 /* HRYouCardCoverCell.xib in Resources */,
 			);
@@ -549,12 +567,14 @@
 			files = (
 				910467AC1D8BBAB4008D6F15 /* HRYouCardCoverView.m in Sources */,
 				910467C81D8EF9C9008D6F15 /* HRYouCardCell.m in Sources */,
+				915B12FB1D9119C500BE3765 /* HRYouCardBulletPointItem.m in Sources */,
 				910467C01D8E6EC8008D6F15 /* HRYouCardView.m in Sources */,
 				91A286EB1D51F9E7008E03E0 /* ViewController.m in Sources */,
 				91A286E81D51F9E7008E03E0 /* AppDelegate.m in Sources */,
 				91A286E51D51F9E7008E03E0 /* main.m in Sources */,
 				910467A91D8BB7AA008D6F15 /* NSString+HRSSSize.m in Sources */,
 				91CF84EF1D5834CD008F75B7 /* HRScrollableCell.m in Sources */,
+				915B12F61D91169500BE3765 /* HRYouCardBulletPointCell.m in Sources */,
 				910467B81D8BE273008D6F15 /* HRYouCardStoryView.m in Sources */,
 				910467CD1D8EFB1F008D6F15 /* HRYouCardStoryCell.m in Sources */,
 				915B12F11D90CFDA00BE3765 /* HRYouCardQuoteCell.m in Sources */,
