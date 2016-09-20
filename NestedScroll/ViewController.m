@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "HRScrollableCell.h"
 
 // cells
 #import "HRYouCardCoverCell.h"
@@ -31,7 +30,8 @@
 
 #define kHRYouCardGradient3 RGBXA(0x000000, 0.3)
 
-@interface ViewController() <
+@interface ViewController()
+<
     UICollectionViewDataSource,
     UICollectionViewDelegateFlowLayout
 >
@@ -73,12 +73,9 @@
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
     _collectionView.backgroundColor = [UIColor clearColor];
     _collectionView.pagingEnabled = YES;
-    [_collectionView setDelegate:self];
-    [_collectionView setDataSource:self];
-    
+    _collectionView.delegate = self;
+    _collectionView.dataSource = self;
 
-    [_collectionView registerClass:[HRScrollableCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
-    
     [_collectionView registerNib:[UINib nibWithNibName:[HRYouCardCoverCell nibName] bundle:nil] forCellWithReuseIdentifier:[HRYouCardCoverCell nibName]];
     [_collectionView registerNib:[UINib nibWithNibName:[HRYouCardStoryCell nibName] bundle:nil] forCellWithReuseIdentifier:[HRYouCardStoryCell nibName]];
     [_collectionView registerNib:[UINib nibWithNibName:[HRYouCardQuoteCell nibName] bundle:nil] forCellWithReuseIdentifier:[HRYouCardQuoteCell nibName]];

@@ -10,12 +10,7 @@
 		37420DB28E0307C122E9CA9E /* libPods-NestedScrollUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F25E1C61964CDE023162FB /* libPods-NestedScrollUITests.a */; };
 		6B6F224556B7F99D1299B7CC /* libPods-NestedScrollTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F8114E382777BB8189DF84 /* libPods-NestedScrollTests.a */; };
 		910467A91D8BB7AA008D6F15 /* NSString+HRSSSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 910467A81D8BB7AA008D6F15 /* NSString+HRSSSize.m */; };
-		910467AC1D8BBAB4008D6F15 /* HRYouCardCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 910467AB1D8BBAB4008D6F15 /* HRYouCardCoverView.m */; };
-		910467B01D8BBAEF008D6F15 /* HRYouCardCoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 910467AF1D8BBAEF008D6F15 /* HRYouCardCoverView.xib */; };
-		910467B81D8BE273008D6F15 /* HRYouCardStoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 910467B71D8BE273008D6F15 /* HRYouCardStoryView.m */; };
-		910467BA1D8BE27D008D6F15 /* HRYouCardStoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 910467B91D8BE27D008D6F15 /* HRYouCardStoryView.xib */; };
 		910467BD1D8BE3F4008D6F15 /* ATMTriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 910467BC1D8BE3F4008D6F15 /* ATMTriangleView.m */; };
-		910467C01D8E6EC8008D6F15 /* HRYouCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 910467BF1D8E6EC8008D6F15 /* HRYouCardView.m */; };
 		910467C81D8EF9C9008D6F15 /* HRYouCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 910467C71D8EF9C9008D6F15 /* HRYouCardCell.m */; };
 		910467CC1D8EFB1F008D6F15 /* HRYouCardStoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 910467C91D8EFB1F008D6F15 /* HRYouCardStoryCell.xib */; };
 		910467CD1D8EFB1F008D6F15 /* HRYouCardStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 910467CB1D8EFB1F008D6F15 /* HRYouCardStoryCell.m */; };
@@ -38,7 +33,6 @@
 		91A286FE1D51F9E8008E03E0 /* NestedScrollTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A286FD1D51F9E8008E03E0 /* NestedScrollTests.m */; };
 		91A287091D51F9E8008E03E0 /* NestedScrollUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A287081D51F9E8008E03E0 /* NestedScrollUITests.m */; };
 		91A2871D1D52E8D9008E03E0 /* StoryCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A2871C1D52E8D9008E03E0 /* StoryCard.xib */; };
-		91CF84EF1D5834CD008F75B7 /* HRScrollableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CF84EE1D5834CD008F75B7 /* HRScrollableCell.m */; };
 		EE0609E3BF5FA32D51CF0ABD /* libPods-NestedScroll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE67AD9B43E6E9583A992291 /* libPods-NestedScroll.a */; };
 /* End PBXBuildFile section */
 
@@ -66,17 +60,9 @@
 		87F25E1C61964CDE023162FB /* libPods-NestedScrollUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NestedScrollUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		910467A71D8BB7AA008D6F15 /* NSString+HRSSSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+HRSSSize.h"; path = "Utils/NSString+HRSSSize.h"; sourceTree = "<group>"; };
 		910467A81D8BB7AA008D6F15 /* NSString+HRSSSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+HRSSSize.m"; path = "Utils/NSString+HRSSSize.m"; sourceTree = "<group>"; };
-		910467AA1D8BBAB4008D6F15 /* HRYouCardCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYouCardCoverView.h; path = Cells/HRYouCardCoverView.h; sourceTree = "<group>"; };
-		910467AB1D8BBAB4008D6F15 /* HRYouCardCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYouCardCoverView.m; path = Cells/HRYouCardCoverView.m; sourceTree = "<group>"; };
-		910467AF1D8BBAEF008D6F15 /* HRYouCardCoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRYouCardCoverView.xib; path = Cells/HRYouCardCoverView.xib; sourceTree = "<group>"; };
 		910467B21D8BBCC4008D6F15 /* HRYouCardViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRYouCardViewProtocol.h; sourceTree = "<group>"; };
-		910467B61D8BE273008D6F15 /* HRYouCardStoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYouCardStoryView.h; path = Cells/HRYouCardStoryView.h; sourceTree = "<group>"; };
-		910467B71D8BE273008D6F15 /* HRYouCardStoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYouCardStoryView.m; path = Cells/HRYouCardStoryView.m; sourceTree = "<group>"; };
-		910467B91D8BE27D008D6F15 /* HRYouCardStoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRYouCardStoryView.xib; path = Cells/HRYouCardStoryView.xib; sourceTree = "<group>"; };
 		910467BB1D8BE3F4008D6F15 /* ATMTriangleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATMTriangleView.h; path = Utils/ATMTriangleView.h; sourceTree = "<group>"; };
 		910467BC1D8BE3F4008D6F15 /* ATMTriangleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATMTriangleView.m; path = Utils/ATMTriangleView.m; sourceTree = "<group>"; };
-		910467BE1D8E6EC8008D6F15 /* HRYouCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYouCardView.h; path = Cells/HRYouCardView.h; sourceTree = "<group>"; };
-		910467BF1D8E6EC8008D6F15 /* HRYouCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYouCardView.m; path = Cells/HRYouCardView.m; sourceTree = "<group>"; };
 		910467C61D8EF9C9008D6F15 /* HRYouCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYouCardCell.h; path = Cells/HRYouCardCell.h; sourceTree = "<group>"; };
 		910467C71D8EF9C9008D6F15 /* HRYouCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYouCardCell.m; path = Cells/HRYouCardCell.m; sourceTree = "<group>"; };
 		910467C91D8EFB1F008D6F15 /* HRYouCardStoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRYouCardStoryCell.xib; path = Cells/HRYouCardStoryCell.xib; sourceTree = "<group>"; };
@@ -116,8 +102,6 @@
 		91A2870A1D51F9E8008E03E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91A2871C1D52E8D9008E03E0 /* StoryCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryCard.xib; sourceTree = "<group>"; };
 		91A2872A1D535657008E03E0 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
-		91CF84ED1D5834CD008F75B7 /* HRScrollableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRScrollableCell.h; sourceTree = "<group>"; };
-		91CF84EE1D5834CD008F75B7 /* HRScrollableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRScrollableCell.m; sourceTree = "<group>"; };
 		A0F8114E382777BB8189DF84 /* libPods-NestedScrollTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NestedScrollTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE67AD9B43E6E9583A992291 /* libPods-NestedScroll.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NestedScroll.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E417E7CBC2F67281CEA73572 /* Pods-NestedScrollTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedScrollTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NestedScrollTests/Pods-NestedScrollTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -179,14 +163,6 @@
 		9104679D1D8BAD0C008D6F15 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				910467BE1D8E6EC8008D6F15 /* HRYouCardView.h */,
-				910467BF1D8E6EC8008D6F15 /* HRYouCardView.m */,
-				910467AA1D8BBAB4008D6F15 /* HRYouCardCoverView.h */,
-				910467AB1D8BBAB4008D6F15 /* HRYouCardCoverView.m */,
-				910467AF1D8BBAEF008D6F15 /* HRYouCardCoverView.xib */,
-				910467B61D8BE273008D6F15 /* HRYouCardStoryView.h */,
-				910467B71D8BE273008D6F15 /* HRYouCardStoryView.m */,
-				910467B91D8BE27D008D6F15 /* HRYouCardStoryView.xib */,
 				910467C61D8EF9C9008D6F15 /* HRYouCardCell.h */,
 				910467C71D8EF9C9008D6F15 /* HRYouCardCell.m */,
 				910467CE1D8FB814008D6F15 /* HRYouCardCoverCell.h */,
@@ -253,8 +229,6 @@
 				91A286E71D51F9E7008E03E0 /* AppDelegate.m */,
 				91A286E91D51F9E7008E03E0 /* ViewController.h */,
 				91A286EA1D51F9E7008E03E0 /* ViewController.m */,
-				91CF84ED1D5834CD008F75B7 /* HRScrollableCell.h */,
-				91CF84EE1D5834CD008F75B7 /* HRScrollableCell.m */,
 				910467B21D8BBCC4008D6F15 /* HRYouCardViewProtocol.h */,
 				910467A61D8BB774008D6F15 /* Utils */,
 				9104679D1D8BAD0C008D6F15 /* Cells */,
@@ -410,10 +384,8 @@
 				91A286F31D51F9E7008E03E0 /* LaunchScreen.storyboard in Resources */,
 				91A2871D1D52E8D9008E03E0 /* StoryCard.xib in Resources */,
 				915B12F21D90CFDA00BE3765 /* HRYouCardQuoteCell.xib in Resources */,
-				910467BA1D8BE27D008D6F15 /* HRYouCardStoryView.xib in Resources */,
 				910467CC1D8EFB1F008D6F15 /* HRYouCardStoryCell.xib in Resources */,
 				91A286F01D51F9E7008E03E0 /* Assets.xcassets in Resources */,
-				910467B01D8BBAEF008D6F15 /* HRYouCardCoverView.xib in Resources */,
 				915B12FC1D9119C500BE3765 /* HRYouCardBulletPointItem.xib in Resources */,
 				915B12FE1D912F7B00BE3765 /* HRYouCardBulletPointCell.xib in Resources */,
 				91A286EE1D51F9E7008E03E0 /* Main.storyboard in Resources */,
@@ -565,17 +537,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				910467AC1D8BBAB4008D6F15 /* HRYouCardCoverView.m in Sources */,
 				910467C81D8EF9C9008D6F15 /* HRYouCardCell.m in Sources */,
 				915B12FB1D9119C500BE3765 /* HRYouCardBulletPointItem.m in Sources */,
-				910467C01D8E6EC8008D6F15 /* HRYouCardView.m in Sources */,
 				91A286EB1D51F9E7008E03E0 /* ViewController.m in Sources */,
 				91A286E81D51F9E7008E03E0 /* AppDelegate.m in Sources */,
 				91A286E51D51F9E7008E03E0 /* main.m in Sources */,
 				910467A91D8BB7AA008D6F15 /* NSString+HRSSSize.m in Sources */,
-				91CF84EF1D5834CD008F75B7 /* HRScrollableCell.m in Sources */,
 				915B12F61D91169500BE3765 /* HRYouCardBulletPointCell.m in Sources */,
-				910467B81D8BE273008D6F15 /* HRYouCardStoryView.m in Sources */,
 				910467CD1D8EFB1F008D6F15 /* HRYouCardStoryCell.m in Sources */,
 				915B12F11D90CFDA00BE3765 /* HRYouCardQuoteCell.m in Sources */,
 				910467BD1D8BE3F4008D6F15 /* ATMTriangleView.m in Sources */,
