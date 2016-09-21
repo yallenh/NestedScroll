@@ -26,6 +26,7 @@
 		915B130C1D922C0700BE3765 /* HRYouCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915B130A1D922C0700BE3765 /* HRYouCardViewController.m */; };
 		915B130D1D922C0700BE3765 /* HRYouCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915B130B1D922C0700BE3765 /* HRYouCardViewController.xib */; };
 		915B13101D922C1400BE3765 /* UIViewController+ATMContainment.m in Sources */ = {isa = PBXBuildFile; fileRef = 915B130F1D922C1400BE3765 /* UIViewController+ATMContainment.m */; };
+		915B13161D9239E800BE3765 /* HRYouCardNavPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 915B13151D9239E800BE3765 /* HRYouCardNavPoint.m */; };
 		918331BB1D8FDE4B00BB618C /* CALayer+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 918331BA1D8FDE4B00BB618C /* CALayer+UIColor.m */; };
 		91A286E51D51F9E7008E03E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A286E41D51F9E7008E03E0 /* main.m */; };
 		91A286E81D51F9E7008E03E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A286E71D51F9E7008E03E0 /* AppDelegate.m */; };
@@ -89,6 +90,8 @@
 		915B130B1D922C0700BE3765 /* HRYouCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRYouCardViewController.xib; sourceTree = "<group>"; };
 		915B130E1D922C1400BE3765 /* UIViewController+ATMContainment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ATMContainment.h"; path = "Utils/UIViewController+ATMContainment.h"; sourceTree = "<group>"; };
 		915B130F1D922C1400BE3765 /* UIViewController+ATMContainment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ATMContainment.m"; path = "Utils/UIViewController+ATMContainment.m"; sourceTree = "<group>"; };
+		915B13141D9239E800BE3765 /* HRYouCardNavPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRYouCardNavPoint.h; path = Cells/HRYouCardNavPoint.h; sourceTree = "<group>"; };
+		915B13151D9239E800BE3765 /* HRYouCardNavPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYouCardNavPoint.m; path = Cells/HRYouCardNavPoint.m; sourceTree = "<group>"; };
 		918331B91D8FDE4B00BB618C /* CALayer+UIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+UIColor.h"; path = "Utils/CALayer+UIColor.h"; sourceTree = "<group>"; };
 		918331BA1D8FDE4B00BB618C /* CALayer+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+UIColor.m"; path = "Utils/CALayer+UIColor.m"; sourceTree = "<group>"; };
 		91A286E01D51F9E7008E03E0 /* NestedScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestedScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +171,8 @@
 		9104679D1D8BAD0C008D6F15 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				915B13141D9239E800BE3765 /* HRYouCardNavPoint.h */,
+				915B13151D9239E800BE3765 /* HRYouCardNavPoint.m */,
 				910467C61D8EF9C9008D6F15 /* HRYouCardCell.h */,
 				910467C71D8EF9C9008D6F15 /* HRYouCardCell.m */,
 				910467CE1D8FB814008D6F15 /* HRYouCardCoverCell.h */,
@@ -559,6 +564,7 @@
 				910467D51D8FC1CA008D6F15 /* HRGraphicsFactory.m in Sources */,
 				910467D11D8FB814008D6F15 /* HRYouCardCoverCell.m in Sources */,
 				915B130C1D922C0700BE3765 /* HRYouCardViewController.m in Sources */,
+				915B13161D9239E800BE3765 /* HRYouCardNavPoint.m in Sources */,
 				918331BB1D8FDE4B00BB618C /* CALayer+UIColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

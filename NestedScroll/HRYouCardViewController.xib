@@ -7,13 +7,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HRYouCardViewController">
             <connections>
-                <outlet property="collectionView" destination="mqC-mE-5Ml" id="B0x-8D-jxB"/>
+                <outlet property="cards" destination="mqC-mE-5Ml" id="08Y-eY-VPg"/>
+                <outlet property="header" destination="vKP-hH-t96" id="hAv-fK-Oyc"/>
                 <outlet property="headerBackButton" destination="wBD-4K-EQ3" id="h2h-gX-19a"/>
                 <outlet property="headerLikeButton" destination="4wp-cY-dDp" id="gDI-5q-Rmp"/>
                 <outlet property="headerSaveButton" destination="zK0-NT-7zn" id="ydL-yc-KPb"/>
                 <outlet property="headerSource" destination="L9K-Dm-y71" id="UBF-S9-4VC"/>
                 <outlet property="headerTitle" destination="EUp-Gj-OZ0" id="Ekw-nP-wXj"/>
-                <outlet property="headerView" destination="vKP-hH-t96" id="mJL-K1-3tl"/>
+                <outlet property="navbar" destination="1Xa-iu-Loq" id="Bcw-fG-dVn"/>
+                <outlet property="navbarHeightConstraint" destination="3z5-Ob-mpW" id="n2q-rR-NVq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -109,13 +111,33 @@
                         <constraint firstItem="L9K-Dm-y71" firstAttribute="leading" secondItem="EUp-Gj-OZ0" secondAttribute="leading" id="zpf-44-l7z"/>
                     </constraints>
                 </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1Xa-iu-Loq">
+                    <rect key="frame" x="335" y="193" width="24" height="214"/>
+                    <color key="backgroundColor" red="0.11372549019607843" green="0.69803921568627447" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="214" id="3z5-Ob-mpW"/>
+                        <constraint firstAttribute="width" constant="24" id="Tlo-96-fdV"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J5z-zV-rKv">
+                        <size key="itemSize" width="15" height="15"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="12" maxX="0.0" maxY="12"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dnZ-t1-pag"/>
+                        <outlet property="delegate" destination="-1" id="V1V-fG-oab"/>
+                    </connections>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="1Xa-iu-Loq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0y2-12-Vkf"/>
                 <constraint firstItem="mqC-mE-5Ml" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="49F-sW-OMg"/>
                 <constraint firstItem="vKP-hH-t96" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="H0Q-4A-ZsL"/>
                 <constraint firstAttribute="bottom" secondItem="mqC-mE-5Ml" secondAttribute="bottom" id="OYu-ds-DaO"/>
                 <constraint firstItem="mqC-mE-5Ml" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PR9-fw-uuD"/>
+                <constraint firstAttribute="trailing" secondItem="1Xa-iu-Loq" secondAttribute="trailing" constant="16" id="U0V-us-gir"/>
                 <constraint firstAttribute="trailing" secondItem="mqC-mE-5Ml" secondAttribute="trailing" id="V5E-wa-fLq"/>
                 <constraint firstItem="vKP-hH-t96" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fWE-ME-s4H"/>
                 <constraint firstAttribute="trailing" secondItem="vKP-hH-t96" secondAttribute="trailing" id="hdQ-2f-cWN"/>
