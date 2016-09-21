@@ -40,6 +40,10 @@ UICollectionViewDelegateFlowLayout
 >
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIButton *headerBackButton;
+@property (weak, nonatomic) IBOutlet UIButton *headerSaveButton;
+@property (weak, nonatomic) IBOutlet UIButton *headerLikeButton;
+@property (weak, nonatomic) IBOutlet UILabel *headerTitle;
+@property (weak, nonatomic) IBOutlet UILabel *headerSource;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic) UIImageView *imageView;
@@ -54,14 +58,19 @@ UICollectionViewDelegateFlowLayout
     self.view.frame = [[UIScreen mainScreen] bounds];
     self.view.backgroundColor = kHRStreamDefaultBackgroundColor;
 
-    [self setUpHeaderGradient];
+    [self setUpHeader];
     [self setUpCoverBackgroundWithGradient];
     [self setUpCollectionView];
 }
 
-- (void)setUpHeaderGradient
+- (void)setUpHeader
 {
-    [_headerView.layer insertSublayer:[[HRGraphicsFactory sharedFactory] generateGradientLayerWithColors:@[kHRYouCardHeaderGradientStart, kHRYouCardHeaderGradientEnd] gradientType:kHRGraphicsFactoryGradientTypeHorizontal points:nil size:CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(_headerView.frame))] atIndex:0];
+    [self.headerView.layer insertSublayer:[[HRGraphicsFactory sharedFactory] generateGradientLayerWithColors:@[kHRYouCardHeaderGradientStart, kHRYouCardHeaderGradientEnd] gradientType:kHRGraphicsFactoryGradientTypeHorizontal points:nil size:CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetHeight(_headerView.frame))] atIndex:0];
+
+    UIImageView *saveIcon= self.headerSaveButton.imageView;
+    saveIcon.image = [saveIcon.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    saveIcon.tintColor = [UIColor whiteColor];
+    [self.headerSaveButton setImage:saveIcon.image forState:UIControlStateNormal];
 }
 
 - (void)setUpCoverBackgroundWithGradient
@@ -97,7 +106,20 @@ UICollectionViewDelegateFlowLayout
 }
 */
 
+#pragma mark UI handler
+- (IBAction)didTapBackButton:(id)sender {
+}
+
+- (IBAction)didTapSaveButton:(id)sender {
+}
+
+- (IBAction)didTapLikeButton:(id)sender {
+}
+
+
+
 #pragma mark collection view delegates
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 4;

@@ -9,6 +9,10 @@
             <connections>
                 <outlet property="collectionView" destination="mqC-mE-5Ml" id="B0x-8D-jxB"/>
                 <outlet property="headerBackButton" destination="wBD-4K-EQ3" id="h2h-gX-19a"/>
+                <outlet property="headerLikeButton" destination="4wp-cY-dDp" id="gDI-5q-Rmp"/>
+                <outlet property="headerSaveButton" destination="zK0-NT-7zn" id="ydL-yc-KPb"/>
+                <outlet property="headerSource" destination="L9K-Dm-y71" id="UBF-S9-4VC"/>
+                <outlet property="headerTitle" destination="EUp-Gj-OZ0" id="Ekw-nP-wXj"/>
                 <outlet property="headerView" destination="vKP-hH-t96" id="mJL-K1-3tl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -41,13 +45,68 @@
                                 <constraint firstAttribute="width" constant="22" id="Kxq-5X-qNy"/>
                             </constraints>
                             <state key="normal" image="youcard-arrow"/>
+                            <connections>
+                                <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="1bn-CH-ShG"/>
+                            </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zK0-NT-7zn">
+                            <rect key="frame" x="269" y="19" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="7dg-JF-7kS"/>
+                                <constraint firstAttribute="height" constant="25" id="LAi-Hz-6jg"/>
+                            </constraints>
+                            <state key="normal" image="StreamCell_Save"/>
+                            <connections>
+                                <action selector="didTapSaveButton:" destination="-1" eventType="touchUpInside" id="Pe6-jB-8jd"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wp-cY-dDp">
+                            <rect key="frame" x="300" y="13" width="63" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="63" id="OLj-zf-O4J"/>
+                                <constraint firstAttribute="height" constant="38" id="hic-zp-01C"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="3" maxY="0.0"/>
+                            <state key="normal" title="999" image="youcard-like"/>
+                            <connections>
+                                <action selector="didTapLikeButton:" destination="-1" eventType="touchUpInside" id="752-KE-kqa"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全台五大深夜咖啡廳" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUp-Gj-OZ0">
+                            <rect key="frame" x="106" y="10" width="162" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="Ioq-in-UOH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yahoo懶人卡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9K-Dm-y71">
+                            <rect key="frame" x="106" y="36" width="162" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="96b-Qn-AgN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.67843137249999996" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="EUp-Gj-OZ0" secondAttribute="trailing" constant="107" id="AYa-h6-uXa"/>
                         <constraint firstAttribute="height" constant="64" id="JBH-SR-1tL"/>
                         <constraint firstItem="wBD-4K-EQ3" firstAttribute="centerY" secondItem="vKP-hH-t96" secondAttribute="centerY" id="Ki7-WF-2K5"/>
+                        <constraint firstItem="L9K-Dm-y71" firstAttribute="top" secondItem="EUp-Gj-OZ0" secondAttribute="bottom" constant="2" id="Lbr-ps-A05"/>
+                        <constraint firstItem="L9K-Dm-y71" firstAttribute="trailing" secondItem="EUp-Gj-OZ0" secondAttribute="trailing" id="MEc-eV-APD"/>
+                        <constraint firstItem="EUp-Gj-OZ0" firstAttribute="leading" secondItem="vKP-hH-t96" secondAttribute="leading" constant="106" id="PQR-Rv-7ar"/>
+                        <constraint firstItem="EUp-Gj-OZ0" firstAttribute="top" secondItem="vKP-hH-t96" secondAttribute="top" constant="10" id="Pdi-wQ-al2"/>
                         <constraint firstItem="wBD-4K-EQ3" firstAttribute="leading" secondItem="vKP-hH-t96" secondAttribute="leading" constant="13" id="Y7N-an-OIU"/>
+                        <constraint firstAttribute="trailing" secondItem="4wp-cY-dDp" secondAttribute="trailing" constant="12" id="fnZ-wg-wA7"/>
+                        <constraint firstItem="zK0-NT-7zn" firstAttribute="centerY" secondItem="wBD-4K-EQ3" secondAttribute="centerY" id="gQw-UE-nBb"/>
+                        <constraint firstItem="4wp-cY-dDp" firstAttribute="leading" secondItem="zK0-NT-7zn" secondAttribute="trailing" constant="6" id="tZ8-6O-FOI"/>
+                        <constraint firstItem="4wp-cY-dDp" firstAttribute="centerY" secondItem="wBD-4K-EQ3" secondAttribute="centerY" id="y5Y-oC-5EA"/>
+                        <constraint firstItem="L9K-Dm-y71" firstAttribute="leading" secondItem="EUp-Gj-OZ0" secondAttribute="leading" id="zpf-44-l7z"/>
                     </constraints>
                 </view>
             </subviews>
@@ -65,6 +124,8 @@
         </view>
     </objects>
     <resources>
+        <image name="StreamCell_Save" width="40" height="40"/>
         <image name="youcard-arrow" width="13" height="20"/>
+        <image name="youcard-like" width="30" height="40"/>
     </resources>
 </document>
