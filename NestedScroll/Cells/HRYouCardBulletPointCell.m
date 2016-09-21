@@ -20,6 +20,11 @@
 @property (weak, nonatomic) IBOutlet UIView *scrollContentView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *cover;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *coverBottomConstraint;
+@property (weak, nonatomic) IBOutlet UIImageView *coverIcon;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *coverIconBottonConstraint;
+
+
 @property (weak, nonatomic) IBOutlet UILabel *subTitle;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *subTitleHeightConstraint;
 
@@ -34,6 +39,7 @@
 
 @property (nonatomic) NSMutableArray *itemsText;
 @property (nonatomic) NSMutableArray *itemsHeight;
+
 @end
 
 @implementation HRYouCardBulletPointCell
@@ -55,8 +61,24 @@
 {
     NSString *title = @"睡不著的好去處！全台五大深夜咖啡廳";
     NSString *provider = @"蘋果日報";
+    NSString *coverURL = @"https://i1.kknews.cc/large/5678/5352774826";
 
-    [self.cover sd_setImageWithURL:[NSURL URLWithString:@"https://i1.kknews.cc/large/5678/5352774826"] placeholderImage:nil options:SDWebImageRefreshCached];
+    if (coverURL) {
+        self.cover.hidden = NO;
+        [self.cover sd_setImageWithURL:[NSURL URLWithString:coverURL] placeholderImage:nil options:SDWebImageRefreshCached];
+        self.coverBottomConstraint.priority = UILayoutPriorityDefaultHigh;
+        self.coverIcon.hidden = YES;
+        self.coverIconBottonConstraint.priority = UILayoutPriorityDefaultLow;
+        self.scrollContentView.backgroundColor = [UIColor whiteColor];
+    }
+    else {
+        self.cover.hidden = YES;
+        self.coverBottomConstraint.priority = UILayoutPriorityDefaultLow;
+        self.coverIcon.hidden = NO;
+        self.coverIconBottonConstraint.priority = UILayoutPriorityDefaultHigh;
+        self.scrollContentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"youcard-list-bg"]];
+    }
+    
 
     self.subTitle.text = title;
     self.subTitleHeightConstraint.constant = [self heightForLabelText:self.subTitle.text fontSize:subTitleFontSize];
@@ -67,6 +89,11 @@
     self.itemsHeight = [NSMutableArray array];
     self.itemsText = [NSMutableArray arrayWithArray:
     @[
+      @"暗角咖啡",
+      @"離線咖啡1離線咖啡2離線咖啡3離線咖啡4離線咖啡5離線咖啡6離線咖啡7離線咖啡8",
+      @"Sugar Man Cafe",
+      @"Kuantum Kafe",
+      @"早秋咖啡 CAFE Macho1早秋咖啡 CAFE Macho2早秋咖啡 CAFE Macho3",
       @"暗角咖啡",
       @"離線咖啡1離線咖啡2離線咖啡3離線咖啡4離線咖啡5離線咖啡6離線咖啡7離線咖啡8",
       @"Sugar Man Cafe",

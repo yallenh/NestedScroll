@@ -67,7 +67,7 @@
                                             <constraint firstAttribute="height" constant="18" id="vCn-bM-PWw"/>
                                             <constraint firstAttribute="width" constant="18" id="zet-Gm-TI9"/>
                                         </constraints>
-                                        <state key="normal" title="Button" backgroundImage="youcard-info"/>
+                                        <state key="normal" backgroundImage="youcard-info"/>
                                         <connections>
                                             <action selector="didTapInfoButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="dbh-yl-yCb"/>
                                         </connections>
