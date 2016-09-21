@@ -48,11 +48,11 @@
                         <color key="textColor" red="0.72549019609999998" green="0.74117647060000003" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowup" translatesAutoresizingMaskIntoConstraints="NO" id="7By-zj-asr">
-                        <rect key="frame" x="180" y="369" width="14" height="12"/>
+                    <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youcard-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="7By-zj-asr">
+                        <rect key="frame" x="180" y="369" width="14" height="8"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="14" id="2Ye-Gd-fUs"/>
-                            <constraint firstAttribute="height" constant="12" id="G4F-9O-gvp"/>
+                            <constraint firstAttribute="height" constant="8" id="G4F-9O-gvp"/>
                         </constraints>
                     </imageView>
                 </subviews>
@@ -72,6 +72,7 @@
                 <constraint firstItem="1SI-V7-ppH" firstAttribute="top" secondItem="8fa-Mk-6qb" secondAttribute="bottom" constant="10" id="pnB-FX-YMw"/>
             </constraints>
             <connections>
+                <outlet property="arrow" destination="7By-zj-asr" id="hwR-3I-Kbg"/>
                 <outlet property="desc" destination="1SI-V7-ppH" id="969-P6-lir"/>
                 <outlet property="descCenterYConstraint" destination="7Hv-Xh-chp" id="Qmu-Ve-Vr2"/>
                 <outlet property="descHeightConstraint" destination="iu9-A0-Bj0" id="hWW-CW-1gT"/>
@@ -83,6 +84,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="arrowup" width="19" height="18"/>
+        <image name="youcard-arrow" width="13" height="20"/>
     </resources>
 </document>

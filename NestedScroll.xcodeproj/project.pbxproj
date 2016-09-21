@@ -23,6 +23,9 @@
 		915B12FB1D9119C500BE3765 /* HRYouCardBulletPointItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 915B12F91D9119C500BE3765 /* HRYouCardBulletPointItem.m */; };
 		915B12FC1D9119C500BE3765 /* HRYouCardBulletPointItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915B12FA1D9119C500BE3765 /* HRYouCardBulletPointItem.xib */; };
 		915B12FE1D912F7B00BE3765 /* HRYouCardBulletPointCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915B12FD1D912F7B00BE3765 /* HRYouCardBulletPointCell.xib */; };
+		915B130C1D922C0700BE3765 /* HRYouCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915B130A1D922C0700BE3765 /* HRYouCardViewController.m */; };
+		915B130D1D922C0700BE3765 /* HRYouCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915B130B1D922C0700BE3765 /* HRYouCardViewController.xib */; };
+		915B13101D922C1400BE3765 /* UIViewController+ATMContainment.m in Sources */ = {isa = PBXBuildFile; fileRef = 915B130F1D922C1400BE3765 /* UIViewController+ATMContainment.m */; };
 		918331BB1D8FDE4B00BB618C /* CALayer+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 918331BA1D8FDE4B00BB618C /* CALayer+UIColor.m */; };
 		91A286E51D51F9E7008E03E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A286E41D51F9E7008E03E0 /* main.m */; };
 		91A286E81D51F9E7008E03E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A286E71D51F9E7008E03E0 /* AppDelegate.m */; };
@@ -82,6 +85,11 @@
 		915B12F91D9119C500BE3765 /* HRYouCardBulletPointItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRYouCardBulletPointItem.m; path = Cells/HRYouCardBulletPointItem.m; sourceTree = "<group>"; };
 		915B12FA1D9119C500BE3765 /* HRYouCardBulletPointItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRYouCardBulletPointItem.xib; path = Cells/HRYouCardBulletPointItem.xib; sourceTree = "<group>"; };
 		915B12FD1D912F7B00BE3765 /* HRYouCardBulletPointCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRYouCardBulletPointCell.xib; path = Cells/HRYouCardBulletPointCell.xib; sourceTree = "<group>"; };
+		915B13091D922C0700BE3765 /* HRYouCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRYouCardViewController.h; sourceTree = "<group>"; };
+		915B130A1D922C0700BE3765 /* HRYouCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRYouCardViewController.m; sourceTree = "<group>"; };
+		915B130B1D922C0700BE3765 /* HRYouCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRYouCardViewController.xib; sourceTree = "<group>"; };
+		915B130E1D922C1400BE3765 /* UIViewController+ATMContainment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ATMContainment.h"; path = "Utils/UIViewController+ATMContainment.h"; sourceTree = "<group>"; };
+		915B130F1D922C1400BE3765 /* UIViewController+ATMContainment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ATMContainment.m"; path = "Utils/UIViewController+ATMContainment.m"; sourceTree = "<group>"; };
 		918331B91D8FDE4B00BB618C /* CALayer+UIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+UIColor.h"; path = "Utils/CALayer+UIColor.h"; sourceTree = "<group>"; };
 		918331BA1D8FDE4B00BB618C /* CALayer+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+UIColor.m"; path = "Utils/CALayer+UIColor.m"; sourceTree = "<group>"; };
 		91A286E01D51F9E7008E03E0 /* NestedScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestedScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +195,8 @@
 		910467A61D8BB774008D6F15 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				915B130E1D922C1400BE3765 /* UIViewController+ATMContainment.h */,
+				915B130F1D922C1400BE3765 /* UIViewController+ATMContainment.m */,
 				910467A71D8BB7AA008D6F15 /* NSString+HRSSSize.h */,
 				910467A81D8BB7AA008D6F15 /* NSString+HRSSSize.m */,
 				910467BB1D8BE3F4008D6F15 /* ATMTriangleView.h */,
@@ -229,6 +239,9 @@
 				91A286E71D51F9E7008E03E0 /* AppDelegate.m */,
 				91A286E91D51F9E7008E03E0 /* ViewController.h */,
 				91A286EA1D51F9E7008E03E0 /* ViewController.m */,
+				915B13091D922C0700BE3765 /* HRYouCardViewController.h */,
+				915B130A1D922C0700BE3765 /* HRYouCardViewController.m */,
+				915B130B1D922C0700BE3765 /* HRYouCardViewController.xib */,
 				910467B21D8BBCC4008D6F15 /* HRYouCardViewProtocol.h */,
 				910467A61D8BB774008D6F15 /* Utils */,
 				9104679D1D8BAD0C008D6F15 /* Cells */,
@@ -385,6 +398,7 @@
 				91A2871D1D52E8D9008E03E0 /* StoryCard.xib in Resources */,
 				915B12F21D90CFDA00BE3765 /* HRYouCardQuoteCell.xib in Resources */,
 				910467CC1D8EFB1F008D6F15 /* HRYouCardStoryCell.xib in Resources */,
+				915B130D1D922C0700BE3765 /* HRYouCardViewController.xib in Resources */,
 				91A286F01D51F9E7008E03E0 /* Assets.xcassets in Resources */,
 				915B12FC1D9119C500BE3765 /* HRYouCardBulletPointItem.xib in Resources */,
 				915B12FE1D912F7B00BE3765 /* HRYouCardBulletPointCell.xib in Resources */,
@@ -542,6 +556,7 @@
 				91A286EB1D51F9E7008E03E0 /* ViewController.m in Sources */,
 				91A286E81D51F9E7008E03E0 /* AppDelegate.m in Sources */,
 				91A286E51D51F9E7008E03E0 /* main.m in Sources */,
+				915B13101D922C1400BE3765 /* UIViewController+ATMContainment.m in Sources */,
 				910467A91D8BB7AA008D6F15 /* NSString+HRSSSize.m in Sources */,
 				915B12F61D91169500BE3765 /* HRYouCardBulletPointCell.m in Sources */,
 				910467CD1D8EFB1F008D6F15 /* HRYouCardStoryCell.m in Sources */,
@@ -549,6 +564,7 @@
 				910467BD1D8BE3F4008D6F15 /* ATMTriangleView.m in Sources */,
 				910467D51D8FC1CA008D6F15 /* HRGraphicsFactory.m in Sources */,
 				910467D11D8FB814008D6F15 /* HRYouCardCoverCell.m in Sources */,
+				915B130C1D922C0700BE3765 /* HRYouCardViewController.m in Sources */,
 				918331BB1D8FDE4B00BB618C /* CALayer+UIColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

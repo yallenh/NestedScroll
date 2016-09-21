@@ -18,6 +18,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *provider;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *providerHeightConstraint;
+
+@property (weak, nonatomic) IBOutlet UIImageView *arrow;
 @end
 
 @implementation HRYouCardCoverCell
@@ -32,6 +34,8 @@
     self.desc.font = [UIFont systemFontOfSize:descFontSize];
     self.provider.text = nil;
     self.provider.font = [UIFont systemFontOfSize:providerFontSize];
+
+    [self.arrow setImage:[[UIImage alloc] initWithCGImage:self.arrow.image.CGImage scale:1.f orientation:UIImageOrientationRight]];
 }
 
 - (void)populateWithDataSourceItem:(id)item forSize:(CGSize)size;

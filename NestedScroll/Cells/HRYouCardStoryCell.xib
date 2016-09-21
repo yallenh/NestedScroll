@@ -42,7 +42,7 @@
                                             <constraint firstAttribute="height" constant="18" id="AbP-qO-a2Q"/>
                                             <constraint firstAttribute="width" constant="18" id="Yqa-f6-xmC"/>
                                         </constraints>
-                                        <state key="normal" title="Button" backgroundImage="info"/>
+                                        <state key="normal" backgroundImage="youcard-info"/>
                                         <connections>
                                             <action selector="didTapInfoButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="8vt-I3-OeV"/>
                                         </connections>
@@ -154,6 +154,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="info" width="18" height="18"/>
+        <image name="youcard-info" width="18" height="18"/>
     </resources>
 </document>
