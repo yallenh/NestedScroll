@@ -35,7 +35,6 @@
 		91A286F31D51F9E7008E03E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A286F11D51F9E7008E03E0 /* LaunchScreen.storyboard */; };
 		91A286FE1D51F9E8008E03E0 /* NestedScrollTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A286FD1D51F9E8008E03E0 /* NestedScrollTests.m */; };
 		91A287091D51F9E8008E03E0 /* NestedScrollUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A287081D51F9E8008E03E0 /* NestedScrollUITests.m */; };
-		91A2871D1D52E8D9008E03E0 /* StoryCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A2871C1D52E8D9008E03E0 /* StoryCard.xib */; };
 		EE0609E3BF5FA32D51CF0ABD /* libPods-NestedScroll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE67AD9B43E6E9583A992291 /* libPods-NestedScroll.a */; };
 /* End PBXBuildFile section */
 
@@ -108,8 +107,6 @@
 		91A287041D51F9E8008E03E0 /* NestedScrollUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NestedScrollUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A287081D51F9E8008E03E0 /* NestedScrollUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NestedScrollUITests.m; sourceTree = "<group>"; };
 		91A2870A1D51F9E8008E03E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91A2871C1D52E8D9008E03E0 /* StoryCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryCard.xib; sourceTree = "<group>"; };
-		91A2872A1D535657008E03E0 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		A0F8114E382777BB8189DF84 /* libPods-NestedScrollTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NestedScrollTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE67AD9B43E6E9583A992291 /* libPods-NestedScroll.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NestedScroll.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E417E7CBC2F67281CEA73572 /* Pods-NestedScrollTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NestedScrollTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NestedScrollTests/Pods-NestedScrollTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -234,7 +231,6 @@
 		91A286E21D51F9E7008E03E0 /* NestedScroll */ = {
 			isa = PBXGroup;
 			children = (
-				91A2872A1D535657008E03E0 /* Constant.h */,
 				91A286E61D51F9E7008E03E0 /* AppDelegate.h */,
 				91A286E71D51F9E7008E03E0 /* AppDelegate.m */,
 				91A286E91D51F9E7008E03E0 /* ViewController.h */,
@@ -245,7 +241,6 @@
 				910467B21D8BBCC4008D6F15 /* HRYouCardViewProtocol.h */,
 				910467A61D8BB774008D6F15 /* Utils */,
 				9104679D1D8BAD0C008D6F15 /* Cells */,
-				91A2871C1D52E8D9008E03E0 /* StoryCard.xib */,
 				91A286EC1D51F9E7008E03E0 /* Main.storyboard */,
 				91A286EF1D51F9E7008E03E0 /* Assets.xcassets */,
 				91A286F11D51F9E7008E03E0 /* LaunchScreen.storyboard */,
@@ -395,7 +390,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				91A286F31D51F9E7008E03E0 /* LaunchScreen.storyboard in Resources */,
-				91A2871D1D52E8D9008E03E0 /* StoryCard.xib in Resources */,
 				915B12F21D90CFDA00BE3765 /* HRYouCardQuoteCell.xib in Resources */,
 				910467CC1D8EFB1F008D6F15 /* HRYouCardStoryCell.xib in Resources */,
 				915B130D1D922C0700BE3765 /* HRYouCardViewController.xib in Resources */,
