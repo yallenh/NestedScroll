@@ -18,6 +18,8 @@ static const CGFloat navBarOpacity = .7f;
 static const CGFloat navBarLineWidth = 1.f;
 static const CGFloat navBarPointSize = 15.f;
 static const CGFloat navBarPointInset = 3.f;
+static const CGFloat navBarCellSpacing = 10.f;
+static const CGFloat navBarSectionSpacing = 12.f;
 
 @interface HRYouCardNavPoint : UICollectionViewCell
 

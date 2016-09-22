@@ -61,7 +61,7 @@
 {
     NSString *title = @"睡不著的好去處！全台五大深夜咖啡廳";
     NSString *provider = @"蘋果日報";
-    NSString *coverURL = @"https://i1.kknews.cc/large/5678/5352774826";
+    NSString *coverURL = nil;//@"https://i1.kknews.cc/large/5678/5352774826";
 
     if (coverURL) {
         self.cover.hidden = NO;

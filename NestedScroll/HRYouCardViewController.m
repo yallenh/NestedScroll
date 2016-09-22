@@ -76,7 +76,7 @@ UICollectionViewDelegateFlowLayout
     [self setUpNavbar];
     [self setUpCollectionView];
 
-    self.dataSourceItems = @[@{}, @{}, @{}, @{}];
+    self.dataSourceItems = @[@{}, @{}, @{}];
 }
 
 - (void)setUpHeader
@@ -92,7 +92,7 @@ UICollectionViewDelegateFlowLayout
 - (void)setUpCollectionView
 {
     // collection view
-    [self.cards registerNib:[UINib nibWithNibName:[HRYouCardCoverCell nibName] bundle:nil] forCellWithReuseIdentifier:[HRYouCardCoverCell nibName]];
+    [self.cards registerNib:[UINib nibWithNibName:[HRYouCardCoverCell nibName] bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[HRYouCardCoverCell nibName]];
     [self.cards registerNib:[UINib nibWithNibName:[HRYouCardStoryCell nibName] bundle:nil] forCellWithReuseIdentifier:[HRYouCardStoryCell nibName]];
     [self.cards registerNib:[UINib nibWithNibName:[HRYouCardQuoteCell nibName] bundle:nil] forCellWithReuseIdentifier:[HRYouCardQuoteCell nibName]];
     [self.cards registerNib:[UINib nibWithNibName:[HRYouCardBulletPointCell nibName] bundle:nil] forCellWithReuseIdentifier:[HRYouCardBulletPointCell nibName]];
@@ -137,28 +137,26 @@ UICollectionViewDelegateFlowLayout
     [_dataSourceItems enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [weakSelf.cardsState addObject:[NSNumber numberWithBool:idx ? NO : YES]];
     }];
-    _currentIndex = 0;
 
     // resize navbar
     NSUInteger count = [self.dataSourceItems count];
-    if (count > 1) {
-        self.navbarHeightConstraint.constant = count * navBarPointSize + (count - 1) * 10.f + 2 * 12.f;
-        [self.view setNeedsLayout];
-        [self.view layoutIfNeeded];
-
-        // background view
-        UIView *navbarBg = [[UIView alloc] initWithFrame:self.navbar.frame];
-        CAGradientLayer *layer = [[HRGraphicsFactory sharedFactory] generateGradientLayerWithColors:@[kHRYouCardNavbarGradientStart, kHRYouCardNavbarGradientEnd] gradientType:kHRGraphicsFactoryGradientTypeVertical points:nil size:navbarBg.frame.size];
-        layer.cornerRadius = CGRectGetWidth(navbarBg.frame) / 2.f;
-        layer.borderWidth = navBarLineWidth;
-        layer.borderColor = [UIColor whiteColor].CGColor;
-        layer.opacity = navBarOpacity;
-        [navbarBg.layer addSublayer:layer];
-        self.navbar.backgroundView = navbarBg;
-    }
-    else {
-        self.navbar.hidden = YES;
-    }
+    self.navbarHeightConstraint.constant = count * navBarPointSize + (count ? count - 1 : 0) * navBarCellSpacing + 2 * navBarSectionSpacing;
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
+    
+    // navbar background view
+    UIView *navbarBg = [[UIView alloc] initWithFrame:self.navbar.frame];
+    CAGradientLayer *layer = [[HRGraphicsFactory sharedFactory] generateGradientLayerWithColors:@[kHRYouCardNavbarGradientStart, kHRYouCardNavbarGradientEnd] gradientType:kHRGraphicsFactoryGradientTypeVertical points:nil size:navbarBg.frame.size];
+    layer.cornerRadius = CGRectGetWidth(navbarBg.frame) / 2.f;
+    layer.borderWidth = navBarLineWidth;
+    layer.borderColor = [UIColor whiteColor].CGColor;
+    layer.opacity = navBarOpacity;
+    [navbarBg.layer addSublayer:layer];
+    self.navbar.backgroundView = navbarBg;
+    self.navbar.hidden = YES;
+    
+    // init current index
+    _currentIndex = 0;
 }
 
 - (void)setCurrentIndex:(NSUInteger)currentIndex
@@ -195,7 +193,21 @@ UICollectionViewDelegateFlowLayout
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (collectionView == self.navbar) {
+    if (collectionView == self.cards) {
+        HRYouCardCell *cell = nil;
+        if (indexPath.row == 0) {
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:[HRYouCardStoryCell nibName] forIndexPath:indexPath];
+        }
+        else if (indexPath.row == 1) {
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:[HRYouCardQuoteCell nibName] forIndexPath:indexPath];
+        }
+        else if (indexPath.row == 2) {
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:[HRYouCardBulletPointCell nibName] forIndexPath:indexPath];
+        }
+        [cell populateWithDataSourceItem:nil forSize:self.cards.frame.size];
+        return cell;
+    }
+    else if (collectionView == self.navbar) {
         HRYouCardNavPoint *point = [collectionView dequeueReusableCellWithReuseIdentifier:[HRYouCardNavPoint cellName] forIndexPath:indexPath];
         if (indexPath.row == self.currentIndex) {
             point.state = HRYouCardNavPointStateVisiting;
@@ -209,37 +221,51 @@ UICollectionViewDelegateFlowLayout
         return point;
     }
 
-    HRYouCardCell *cell = nil;
-    if (indexPath.row == 0) {
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:[HRYouCardCoverCell nibName] forIndexPath:indexPath];
-    }
-    else if (indexPath.row == 1) {
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:[HRYouCardStoryCell nibName] forIndexPath:indexPath];
-    }
-    else if (indexPath.row == 2) {
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:[HRYouCardQuoteCell nibName] forIndexPath:indexPath];
-    }
-    else if (indexPath.row == 3) {
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:[HRYouCardBulletPointCell nibName] forIndexPath:indexPath];
-    }
-    [cell populateWithDataSourceItem:nil forSize:self.cards.frame.size];
-    return cell;
+    return nil;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (collectionView == self.navbar) {
-        return CGSizeMake(navBarPointSize, navBarPointSize);
-    }
-    else {
+    if (collectionView == self.cards) {
         return self.cards.frame.size;
     }
+    else if (collectionView == self.navbar) {
+        return CGSizeMake(navBarPointSize, navBarPointSize);
+    }
+    return CGSizeZero;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    if (collectionView == self.cards) {
+        return self.cards.frame.size;
+    }
+    return CGSizeZero;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    if (collectionView == self.cards && [kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        HRYouCardCell *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:[HRYouCardCoverCell nibName] forIndexPath:indexPath];
+        [cell populateWithDataSourceItem:nil forSize:self.cards.frame.size];
+        return cell;
+    }
+    return nil;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    CGFloat height = CGRectGetHeight(self.cards.frame);
-    self.currentIndex = ((self.cards.contentOffset.y - height / 2.f) / height) + 1;
+    if (scrollView == self.cards) {
+        CGFloat height = CGRectGetHeight(self.cards.frame);
+        NSUInteger index = ((self.cards.contentOffset.y - height / 2.f) / height) + 1;
+        if (!index) {
+            self.navbar.hidden = YES;
+        }
+        else {
+            self.currentIndex = index - 1;
+            self.navbar.hidden = NO;
+        }
+    }
 }
 
 @end
